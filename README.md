@@ -5,4 +5,4 @@ Opa bato
 
 
 
-Mreze su najbolje
+Mreze su najbolje. Cisco devices is number one, except the juniper equipment
