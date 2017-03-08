@@ -1,0 +1,32 @@
+
+
+- hosts: packer
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  connection: ssh
+
+  tasks:
+   - name: Update
+     apt:
+       upgrade: dist
+
+   - name: Basic staff
+     apt: pkg={{ item }} state=latest  update_cache=true
+     with_items:
+      - curl
+      - git
+      - htop
+      - jq
+      - man
+      - mc
+      - mlocate
+      - nano
+      - rsync
+      - screen
+      - telnet
+      - tree
+      - python-pip
+      - wget
+
